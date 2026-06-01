@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación DOM</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h1 class="text-center mb-4">Formulario de Registro</h1>
+
+        <form>
+
+            <div class="form-floating mb-3">
+                <input id="entradaNombre" type="text" class="form-control" placeholder="Tu nombre">
+                <label class="form-label" for="entradaNombre">Nombre</label>
+            </div>
+
+            <div id="alertNombre" class="alert alert-danger" style="display:none;">
+                El nombre debe tener al menos 3 letras y contener únicamente letras.
+            </div>
+
+            <div class="form-floating mb-3">
+                <input id="entradaCorreo" type="email" class="form-control" placeholder="name@example.com">
+                <label class="form-label" for="entradaCorreo">Email</label> 
+            </div>
+
+            <div id="emailAlert" class="alert alert-danger" style="display:none;">
+                Ingresa un correo válido.
+            </div>
+
+            <div class="form-floating mb-3">
+                <input id="entradaEdad" type="number" class="form-control" placeholder="Edad">
+                <label class="form-label" for="entradaEdad">Edad</label>
+            </div>
+
+            <div id="ageAlert" class="alert alert-danger" style="display:none;">
+                La edad debe ser un número positivo.
+            </div>
+
+            <button id="submitBtn" class="btn btn-primary">
+                Validar
+            </button>
+
+            <button id="clearBtn" class="btn btn-secondary">
+                Limpiar
+            </button>
+
+        </form>
+
+        <h3 id="aviso" class="mt-4 text-success"></h3>
+
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
